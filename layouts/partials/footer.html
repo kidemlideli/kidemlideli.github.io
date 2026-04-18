@@ -1,0 +1,49 @@
+<footer class="bg-[#f0ece6] border-t border-stone-200 mt-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+      <!-- Brand -->
+      <div>
+        <div class="mb-4">
+          <span class="font-display font-bold text-xl">
+            <span class="text-stone-900">Kıdemli</span><span class="text-liminal-700 ml-1.5">Deli</span>
+          </span>
+        </div>
+        <p class="text-stone-500 text-sm leading-relaxed">
+          {{ .Site.Params.tagline }}
+        </p>
+      </div>
+
+      <!-- Navigation -->
+      <div>
+        <h3 class="text-stone-700 font-semibold text-xs uppercase tracking-widest mb-5">Sayfalar</h3>
+        <ul class="space-y-3">
+          {{ range .Site.Menus.main }}
+          <li>
+            <a href="{{ .URL }}" class="text-stone-500 hover:text-liminal-700 text-sm transition-colors">{{ .Name }}</a>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+
+      <!-- Info -->
+      <div>
+        <h3 class="text-stone-700 font-semibold text-xs uppercase tracking-widest mb-5">Hakkında</h3>
+        <p class="text-stone-500 text-sm leading-relaxed">
+          Kıdemli Deli, düşüncelerin ve denemelerin özgürce aktığı bir köşe. Yazmak için bir sebep, okumak için bir neden.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="border-t border-stone-200 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p class="text-stone-500 text-sm">
+        © {{ now.Year }} <span class="text-liminal-700 font-medium">Kıdemli Deli</span>. Tüm hakları saklıdır.
+      </p>
+      <p class="text-stone-400 text-xs">
+        Hugo ile yapılmıştır
+      </p>
+    </div>
+  </div>
+</footer>

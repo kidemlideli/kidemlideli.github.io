@@ -1,0 +1,73 @@
+{{ define "main" }}
+
+{{ $blog    := where .Site.RegularPages "Section" "blog" }}
+{{ $featured := index $blog 0 }}
+{{ $sidebar  := after 1 (first 3 $blog) }}
+{{ $grid     := after 3 $blog }}
+
+<!-- ─── Hero Section ─────────────────────────────────────────── -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8">
+
+  <!-- Section Divider Label -->
+  <div class="flex items-center gap-4 mb-8">
+    <div class="h-px flex-1 bg-gradient-to-r from-liminal-700/60 to-transparent"></div>
+    <span class="text-stone-400 text-xs uppercase tracking-[0.2em] font-medium flex-shrink-0">Son Yazılar</span>
+    <div class="h-px flex-1 bg-gradient-to-l from-liminal-700/60 to-transparent"></div>
+  </div>
+
+  {{ with $featured }}
+  <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+
+    <!-- Featured Post (large, 3/5) -->
+    <div class="lg:col-span-3 min-h-[420px]">
+      {{ partial "card-featured.html" . }}
+    </div>
+
+    <!-- Sidebar blog (2 stacked, 2/5) -->
+    <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
+      {{ range $sidebar }}
+        {{ partial "card.html" (dict "page" .) }}
+      {{ end }}
+    </div>
+
+  </div>
+  {{ end }}
+</section>
+
+<!-- ─── Divider ───────────────────────────────────────────────── -->
+{{ if $grid }}
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="border-t border-stone-200"></div>
+</div>
+
+<!-- ─── Post Grid ─────────────────────────────────────────────── -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+  <h2 class="flex items-center gap-3 text-stone-400 text-xs font-medium uppercase tracking-[0.2em] mb-8">
+    <span class="inline-block w-5 h-px bg-liminal-700"></span>
+    Diğer Yazılar
+  </h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {{ range $grid }}
+      {{ partial "card.html" (dict "page" .) }}
+    {{ end }}
+  </div>
+
+</section>
+{{ end }}
+
+<!-- ─── View All Link (if many blog) ────────────────────────── -->
+{{ if gt (len $blog) 6 }}
+<div class="text-center pb-16">
+  <a href="/blog/"
+     class="inline-flex items-center gap-2 bg-white border border-stone-200 hover:border-liminal-300 text-stone-600 hover:text-liminal-700 px-7 py-3 rounded-xl text-sm font-medium transition-all shadow-sm hover:shadow-md hover:shadow-liminal-100">
+    Tüm Yazıları Gör
+    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+    </svg>
+  </a>
+</div>
+{{ end }}
+
+{{ end }}

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "tr" }}">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body class="bg-[#f8f6f2] text-stone-900 min-h-screen flex flex-col antialiased">
+    {{ partial "header.html" . }}
+    <main class="flex-1">
+      {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+  </body>
+</html>

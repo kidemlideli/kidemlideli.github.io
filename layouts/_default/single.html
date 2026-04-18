@@ -1,0 +1,115 @@
+{{ define "main" }}
+
+<article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-24">
+
+  <!-- ─── Post Header ─────────────────────────────────────────── -->
+  <header class="mb-10">
+
+    <!-- Category Tags -->
+    {{ with .Params.categories }}
+    <div class="flex flex-wrap gap-2 mb-6">
+      {{ range . }}
+      <a href="{{ "/categories/" | relURL }}{{ . | urlize }}"
+         class="bg-liminal-50 text-liminal-700 text-xs font-semibold px-3 py-1.5 rounded-full uppercase tracking-wider border border-liminal-200 hover:bg-liminal-100 transition-colors">
+        {{ . }}
+      </a>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    <!-- Title -->
+    <h1 class="font-display font-bold text-3xl sm:text-4xl md:text-[2.75rem] text-stone-900 leading-tight mb-5">
+      {{ .Title }}
+    </h1>
+
+    <!-- Description / Subtitle -->
+    {{ with .Description }}
+    <p class="text-stone-500 text-xl leading-relaxed mb-6 font-light border-l-2 border-liminal-700 pl-4">{{ . }}</p>
+    {{ end }}
+
+    <!-- Metadata bar -->
+    {{ if eq .Section "blog" }}
+    <div class="flex flex-wrap items-center gap-4 text-sm text-stone-500 pb-7 border-b border-stone-200">
+      <div class="flex items-center gap-2.5">
+        <div class="w-7 h-7 rounded-full bg-liminal-700 flex items-center justify-center text-xs font-bold text-white shadow-sm">
+          {{ substr .Site.Params.author 0 1 }}
+        </div>
+        <span class="text-stone-700 font-medium">{{ .Site.Params.author }}</span>
+      </div>
+      <span class="text-stone-300">·</span>
+      <time datetime="{{ .Date.Format "2006-01-02" }}" class="text-stone-500">
+        {{ partial "date-tr.html" .Date }}
+      </time>
+      <span class="text-stone-300">·</span>
+      <span class="flex items-center gap-1.5">
+        <svg class="w-3.5 h-3.5 text-stone-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2m4-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        {{ .ReadingTime }} dakika okuma
+      </span>
+    </div>
+    {{ end }}
+
+  </header>
+
+  <!-- ─── Featured Image ───────────────────────────────────────── -->
+  {{ with .Params.image }}
+  <div class="mb-10 rounded-2xl overflow-hidden shadow-[0_4px_32px_rgba(0,0,0,0.10)]">
+    <img src="{{ . | relURL }}" alt="{{ $.Title }}" class="w-full aspect-video object-cover">
+  </div>
+  {{ end }}
+
+  <!-- ─── Article Content ──────────────────────────────────────── -->
+  <div id="article-content" class="prose prose-stone max-w-none
+    prose-headings:font-display prose-headings:tracking-tight
+    prose-h2:text-[1.6rem] prose-h2:mt-14 prose-h2:mb-5
+    prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4
+    prose-a:text-liminal-700 prose-a:no-underline hover:prose-a:text-liminal-600 prose-a:font-medium
+    prose-blockquote:border-l-liminal-500 prose-blockquote:not-italic
+    prose-code:text-liminal-700 prose-code:bg-liminal-50
+    prose-pre:bg-stone-900 prose-pre:rounded-2xl
+    prose-strong:text-stone-900 prose-strong:font-semibold
+    prose-hr:border-stone-200 prose-hr:my-12
+    prose-img:rounded-2xl">
+    {{ .Content }}
+  </div>
+
+  <!-- ─── Tags ─────────────────────────────────────────────────── -->
+  {{ with .Params.tags }}
+  <div class="mt-12 pt-8 border-t border-stone-200">
+    <p class="text-stone-400 text-xs uppercase tracking-widest mb-4 font-medium">Etiketler</p>
+    <div class="flex flex-wrap gap-2">
+      {{ range . }}
+      <a href="{{ "/tags/" | relURL }}{{ . | urlize }}"
+         class="bg-stone-100 text-stone-600 text-sm px-3.5 py-1.5 rounded-lg hover:bg-liminal-50 hover:text-liminal-700 transition-all border border-stone-200 hover:border-liminal-200">
+        #{{ . }}
+      </a>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  <!-- ─── Prev / Next Navigation ───────────────────────────────── -->
+  {{ if eq .Section "blog" }}
+  <nav class="mt-14 pt-8 border-t border-stone-200 grid grid-cols-1 sm:grid-cols-2 gap-4">
+    {{ with .PrevInSection }}
+    <a href="{{ .RelPermalink }}"
+       class="group flex flex-col gap-1.5 bg-white rounded-xl p-5 border border-stone-200 hover:border-liminal-200 hover:bg-liminal-50/30 transition-all shadow-sm hover:shadow-md">
+      <span class="text-stone-400 text-xs uppercase tracking-widest font-medium">← Önceki Yazı</span>
+      <span class="text-stone-700 text-sm font-display font-semibold group-hover:text-liminal-700 transition-colors line-clamp-2 leading-snug">{{ .Title }}</span>
+    </a>
+    {{ else }}<div></div>{{ end }}
+
+    {{ with .NextInSection }}
+    <a href="{{ .RelPermalink }}"
+       class="group flex flex-col gap-1.5 bg-white rounded-xl p-5 border border-stone-200 hover:border-liminal-200 hover:bg-liminal-50/30 transition-all shadow-sm hover:shadow-md sm:text-right">
+      <span class="text-stone-400 text-xs uppercase tracking-widest font-medium">Sonraki Yazı →</span>
+      <span class="text-stone-700 text-sm font-display font-semibold group-hover:text-liminal-700 transition-colors line-clamp-2 leading-snug">{{ .Title }}</span>
+    </a>
+    {{ else }}<div></div>{{ end }}
+  </nav>
+  {{ end }}
+
+</article>
+
+{{ end }}

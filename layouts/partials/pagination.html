@@ -1,0 +1,27 @@
+{{ $paginator := .Paginator }}
+{{ if gt $paginator.TotalPages 1 }}
+<div class="flex items-center justify-center gap-2 mt-14 pb-4">
+
+  {{ if $paginator.HasPrev }}
+  <a href="{{ $paginator.Prev.URL }}"
+     class="px-4 py-2 bg-white border border-stone-200 text-stone-600 rounded-lg hover:bg-liminal-50 hover:text-liminal-700 hover:border-liminal-200 transition-all text-sm font-medium shadow-sm">
+    ← Önceki
+  </a>
+  {{ end }}
+
+  {{ range $paginator.Pagers }}
+  <a href="{{ .URL }}"
+     class="w-9 h-9 flex items-center justify-center rounded-lg text-sm font-medium transition-all {{ if eq . $paginator }}bg-liminal-700 text-white shadow-md shadow-liminal-900/20{{ else }}bg-white border border-stone-200 text-stone-500 hover:bg-liminal-50 hover:text-liminal-700 hover:border-liminal-200{{ end }}">
+    {{ .PageNumber }}
+  </a>
+  {{ end }}
+
+  {{ if $paginator.HasNext }}
+  <a href="{{ $paginator.Next.URL }}"
+     class="px-4 py-2 bg-white border border-stone-200 text-stone-600 rounded-lg hover:bg-liminal-50 hover:text-liminal-700 hover:border-liminal-200 transition-all text-sm font-medium shadow-sm">
+    Sonraki →
+  </a>
+  {{ end }}
+
+</div>
+{{ end }}

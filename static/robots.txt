@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kidemlideli.github.io/sitemap.xml

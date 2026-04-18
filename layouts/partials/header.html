@@ -1,0 +1,60 @@
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-stone-200 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 md:h-20">
+
+      <!-- Logo -->
+      <a href="{{ "/" | relURL }}" class="group">
+        <span class="font-display font-bold text-xl tracking-tight">
+          <span class="text-stone-900 group-hover:text-stone-700 transition-colors">Kıdemli</span><span class="text-liminal-700 group-hover:text-liminal-600 transition-colors ml-1.5">Deli</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-8">
+        {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}"
+           class="text-stone-500 hover:text-liminal-700 text-xs font-medium transition-colors uppercase tracking-widest {{ if (eq .URL $.RelPermalink) }}!text-liminal-700{{ end }}">
+          {{ .Name }}
+        </a>
+        {{ end }}
+      </nav>
+
+      <!-- Mobile Hamburger -->
+      <button id="mobile-menu-btn" class="md:hidden text-stone-500 hover:text-stone-900 p-2 transition-colors" aria-label="Menüyü aç">
+        <svg id="icon-open" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="icon-close" class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-stone-100">
+    <div class="px-4 py-5 space-y-1">
+      {{ range .Site.Menus.main }}
+      <a href="{{ .URL }}"
+         class="flex items-center gap-3 text-stone-600 hover:text-liminal-700 font-medium py-2.5 px-3 rounded-lg hover:bg-liminal-50 transition-all text-sm">
+        {{ .Name }}
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</header>
+
+<script>
+  const btn  = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const iconOpen  = document.getElementById('icon-open');
+  const iconClose = document.getElementById('icon-close');
+
+  btn.addEventListener('click', () => {
+    const isOpen = !menu.classList.contains('hidden');
+    menu.classList.toggle('hidden');
+    iconOpen.classList.toggle('hidden',  isOpen ? false : true);
+    iconClose.classList.toggle('hidden', isOpen ? true  : false);
+  });
+</script>

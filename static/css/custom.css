@@ -1,0 +1,212 @@
+/* ── Kıdemli Deli — Custom Styles ──────────────────────────── */
+
+/* ── TAN Meringue Font ───────────────────────────────────── */
+@font-face {
+  font-family: 'TAN Meringue';
+  src: url('/fonts/TAN-MERINGUE.woff2') format('woff2'),
+       url('/fonts/TAN-MERINGUE.otf')   format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Custom Scrollbar ────────────────────────────────────── */
+::-webkit-scrollbar        { width: 7px; }
+::-webkit-scrollbar-track  { background: #f0ece6; }
+::-webkit-scrollbar-thumb  { background: #c4b8c9; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #6828de; }
+
+/* ── Text Selection ──────────────────────────────────────── */
+::selection {
+  background-color: #6828de;
+  color: #fff;
+}
+
+/* ── Card will-change ────────────────────────────────────── */
+article.group { will-change: transform; }
+
+/* ── Focus ring ──────────────────────────────────────────── */
+*:focus-visible {
+  outline: 2px solid #6828de;
+  outline-offset: 2px;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   PROSE — Yazı içerik stilleri (typography plugin backup)
+   ═══════════════════════════════════════════════════════════ */
+
+.prose {
+  font-size: 1.07rem;
+  line-height: 1.95;
+  color: #44403c;
+}
+
+/* Headings */
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  font-family: 'TAN Meringue', 'Plus Jakarta Sans', system-ui, sans-serif;
+  color: #1c1917;
+  letter-spacing: 0.08em !important;
+  line-height: 1.5 !important;
+  font-weight: 700;
+  margin-top: 2.75rem;
+  margin-bottom: 1rem;
+}
+
+h1, h2, h3, h4 {
+  letter-spacing: 0.06em !important;
+  line-height: 1.45 !important;
+}
+
+.prose h2 {
+  font-size: 1.55rem;
+  margin-top: 3.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #f5f5f4;
+}
+
+.prose h3 {
+  font-size: 1.25rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  color: #292524;
+}
+
+/* Paragraphs */
+.prose p {
+  margin-bottom: 1.6rem;
+  color: #44403c;
+}
+
+/* Links */
+.prose a {
+  color: #6828de;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(104, 40, 222, 0.25);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.prose a:hover {
+  color: #5620b5;
+  border-bottom-color: #6828de;
+}
+
+/* Blockquote */
+.prose blockquote {
+  font-style: normal;
+  quotes: none;
+  border-left: 3px solid #7940f5;
+  background: rgba(245, 243, 255, 0.65);
+  border-radius: 0 1rem 1rem 0;
+  padding: 1.1rem 1.5rem;
+  margin: 2rem 0;
+}
+
+.prose blockquote::before,
+.prose blockquote::after { content: none; }
+
+.prose blockquote p {
+  margin: 0;
+  color: #57534e;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* Inline code */
+.prose code {
+  background: #f5f3ff;
+  color: #6828de;
+  border-radius: 0.3rem;
+  padding: 0.15rem 0.45rem;
+  font-size: 0.88em;
+  font-weight: 500;
+}
+
+.prose code::before,
+.prose code::after { content: none; }
+
+/* Code blocks */
+.prose pre {
+  background: #1c1917;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  overflow-x: auto;
+  margin: 2rem 0;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+}
+
+.prose pre code {
+  background: transparent;
+  color: #e7e5e4;
+  padding: 0;
+  border-radius: 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+/* Strong */
+.prose strong {
+  color: #1c1917;
+  font-weight: 600;
+}
+
+/* HR */
+.prose hr {
+  border: none;
+  border-top: 1px solid #f5f5f4;
+  margin: 3rem 0;
+}
+
+/* Lists */
+.prose ul,
+.prose ol {
+  color: #44403c;
+  padding-left: 1.5rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+  line-height: 1.8;
+}
+
+.prose ul li::marker { color: #7940f5; }
+.prose ol li::marker { color: #7940f5; font-weight: 600; }
+
+/* Images */
+.prose img {
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.09);
+  margin: 2rem auto;
+}
+
+/* Image captions */
+.prose figcaption {
+  text-align: center;
+  font-size: 0.82rem;
+  color: #a8a29e;
+  margin-top: 0.5rem;
+}
+
+/* Heading anchor hover hint */
+.prose h2:hover::after,
+.prose h3:hover::after {
+  content: ' #';
+  color: #6828de;
+  opacity: 0.35;
+  font-style: normal;
+}
+

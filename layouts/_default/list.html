@@ -1,0 +1,30 @@
+{{ define "main" }}
+
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-24">
+
+  <!-- ─── Page Header ──────────────────────────────────────────── -->
+  <div class="mb-12 pb-8 border-b border-stone-200">
+    <h1 class="font-display font-bold text-4xl md:text-5xl text-stone-900 mb-3">{{ .Title }}</h1>
+    {{ with .Description }}
+    <p class="text-stone-500 text-lg font-light mt-3">{{ . }}</p>
+    {{ end }}
+    <p class="text-stone-400 text-sm mt-4 flex items-center gap-2">
+      <span class="inline-block w-3 h-px bg-liminal-700"></span>
+      {{ len .Pages }} yazı
+    </p>
+  </div>
+
+  <!-- ─── blog Grid ───────────────────────────────────────────── -->
+  {{ $paginator := .Paginate .Pages }}
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {{ range $paginator.Pages }}
+      {{ partial "card.html" (dict "page" .) }}
+    {{ end }}
+  </div>
+
+  <!-- ─── Pagination ───────────────────────────────────────────── -->
+  {{ partial "pagination.html" . }}
+
+</section>
+
+{{ end }}

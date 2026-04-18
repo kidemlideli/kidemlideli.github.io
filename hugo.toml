@@ -1,0 +1,33 @@
+baseURL = 'https://kidemlideli.github.io/'
+languageCode = 'tr'
+title = 'Kıdemli Deli'
+
+[params]
+  description = "Düşünceler, denemeler ve daha fazlası"
+  author = "Kıdemli Deli"
+  tagline = "Kıdemlice düşünmek, delice yazmak."
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = 'dracula'
+    noClasses = true
+
+[pagination]
+  pagerSize = 9
+
+[menu]
+  [[menu.main]]
+    name = "Anasayfa"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Yazılar"
+    url = "/blog/"
+    weight = 2
+  [[menu.main]]
+    name = "Hakkında"
+    url = "/about/"
+    weight = 3
