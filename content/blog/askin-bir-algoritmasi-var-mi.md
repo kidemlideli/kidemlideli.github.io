@@ -1,6 +1,6 @@
 +++
 title = "Aşkın Bir Algoritması Var mı?"
-date = 2026-04-15
+date = 2026-04-27
 description = "Yapay zeka her şeyi öğrenebiliyorsa, aşkı da öğrenebilir mi? Ve insanı insana bağlayan o kod nerede yazılı?"
 categories = ["Teknoloji", "Düşünceler"]
 tags = ["aşk", "yapay zeka", "algoritma", "insan doğası", "felsefe", "ilişkiler", "teknoloji"]

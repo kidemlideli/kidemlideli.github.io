@@ -1,6 +1,6 @@
 +++
 title = "Arafta Kalmak: Bitmemiş Hikâyelerin Ağırlığı"
-date = 2026-04-15
+date = 2026-04-25
 description = "Bitmemiş hikâyeler zihinsel yer kaplar. Arafta bir ilişkiyi kapatmak, bitmesinden daha zor ama daha gerekli."
 categories = ["İlişkiler"]
 tags = ["ilişkiler", "kapanış", "belirsizlik", "duygusal sağlık", "netlik", "bitmemiş işler"]

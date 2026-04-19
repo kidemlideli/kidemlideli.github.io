@@ -1,6 +1,6 @@
 +++
 title = "Duygularımızı Neden Bu Kadar İçimizde Saklarız"
-date = 2026-04-18
+date = 2026-04-23
 description = "Sevdiğimizi söyleyemiyoruz. Kırıldığımızı itiraf edemiyoruz. Bu bir zayıflık değil — ama nereden geliyor bu suskunluk?"
 categories = ["Düşünceler", "Zihinsel Sağlık"]
 tags = ["duygu bastırma", "iletişim", "ifade edememe", "özgürlük", "farkındalık", "ilişkiler"]

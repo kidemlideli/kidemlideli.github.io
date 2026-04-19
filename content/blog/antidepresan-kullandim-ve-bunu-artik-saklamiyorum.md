@@ -1,6 +1,6 @@
 +++
 title = "Antidepresan Kullandım ve Bunu Artık Saklamıyorum"
-date = 2026-04-18
+date = 2026-04-19
 description = "Antidepresan kullanmak zayıflık değil. Ama bunu söyleyebilmek için uzun bir yol geçti. Bu yazı o sürecin bir parçası."
 categories = ["Zihinsel Sağlık"]
 tags = ["antidepresan", "depresyon", "zihinsel sağlık", "damgalama", "insight", "iyileşme", "ilaç"]

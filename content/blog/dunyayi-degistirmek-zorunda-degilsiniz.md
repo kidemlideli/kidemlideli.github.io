@@ -1,6 +1,6 @@
 +++
 title = "Dünyayı Değiştirmek Zorunda Değilsiniz"
-date = 2026-04-18
+date = 2026-04-29
 description = "Her şeyi tek başıma çözebilirim hissi tanıdık geliyor mu? Küçük ama iyi bir hayat yaşamak — belki de en büyük başarı bu."
 categories = ["Düşünceler"]
 tags = ["yaşam felsefesi", "öz farkındalık", "sadelik", "anlam", "yapay zeka", "gerçeklik"]

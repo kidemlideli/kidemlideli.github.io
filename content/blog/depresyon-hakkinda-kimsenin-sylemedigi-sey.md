@@ -1,6 +1,6 @@
 +++
 title = "Depresyon Hakkında Kimsenin Söylemediği Şey"
-date = 2026-04-18
+date = 2026-04-21
 description = "Depresyona girmek zayıflık değil. Antidepresan kullanmak utanılacak bir şey değil. Bunu neden bu kadar zor söylüyoruz?"
 categories = ["Zihinsel Sağlık"]
 tags = ["depresyon", "zihinsel sağlık", "antidepresan", "iyileşme", "damgalama", "psikoloji"]

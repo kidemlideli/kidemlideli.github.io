@@ -1,6 +1,6 @@
 +++
 title = "Başlamak Kolay, Sürdürmek Neden Bu Kadar Zor?"
-date = 2026-04-15
+date = 2026-04-28
 description = "Tanışmak güzel oluyor, konuşmak akıyor — sonra bir noktada her şey kesilip gidiyor. Bu neden böyle? Ve biz burada ne yanlış yapıyoruz?"
 categories = ["İlişkiler"]
 tags = ["ilişkiler", "bağ kurma", "iletişim", "yalnızlık", "sosyal hayat", "özgüven"]

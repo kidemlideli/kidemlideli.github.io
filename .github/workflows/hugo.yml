@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+  schedule:
+    - cron: '0 6 * * *'   # Her gün sabah 06:00 UTC (09:00 Türkiye) otomatik yayın
   workflow_dispatch:
 
 permissions:

@@ -1,6 +1,6 @@
 +++
 title = "Neden İstediğimizi Söylemekte Bu Kadar Zorlanıyoruz?"
-date = 2026-04-15
+date = 2026-04-24
 description = "Türkiye'de ilişkiler ve arzular hâlâ sessizlik içinde yürütülüyor. Bu sessizliğin bedelini kim ödüyor?"
 categories = ["Toplum", "İlişkiler"]
 tags = ["ilişkiler", "Türkiye", "cinsellik", "toplum", "iletişim", "arzu", "tabu", "Maslow"]
