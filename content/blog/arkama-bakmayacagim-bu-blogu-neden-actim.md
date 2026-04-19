@@ -63,3 +63,5 @@ Artık yapmıyorum. Bunlar kötü şeyler değil. Ne yaptığımız değil, nede
 Bu blogda bu tür şeyler de olacak. Filtre yok.
 
 Arkama bakmayacağım.
+
+Ee o zaman hoş geldiniz :)
