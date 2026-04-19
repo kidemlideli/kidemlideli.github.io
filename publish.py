@@ -109,8 +109,14 @@ def new_post(title: str, description: str | None, categories: list[str], tags: l
 def commit_changes(message: str):
     ensure_git_repo()
     run_git("add", ".")
-    run_git("commit", "-m", message)
-    print(f"Commit yapıldı: {message}")
+    result = subprocess.run(["git", "commit", "-m", message], cwd=REPO_ROOT, text=True,
+                            capture_output=True)
+    if result.returncode == 0:
+        print(f"Commit yapıldı: {message}")
+    elif "nothing to commit" in result.stdout.lower() or "nothing to commit" in result.stderr.lower():
+        print("Commit yapılacak değişiklik yok. Sadece push yapılacak.")
+    else:
+        raise SystemExit(f"Git komutu başarısız: git commit -m {message}\n{result.stderr.strip()}")
 
 
 def push_changes(branch: str, remote: str, token: str | None = None):
