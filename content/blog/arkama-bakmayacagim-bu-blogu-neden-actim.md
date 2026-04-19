@@ -64,4 +64,4 @@ Bu blogda bu tür şeyler de olacak. Filtre yok.
 
 Arkama bakmayacağım.
 
-Ee o zaman hoş geldiniz :)
+Ee o zaman hoş geldin :)
