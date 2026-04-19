@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import argparse
+import os
 import subprocess
 from datetime import datetime
 from pathlib import Path
@@ -8,6 +9,35 @@ import sys
 
 REPO_ROOT = Path(__file__).resolve().parent
 BLOG_DIR = REPO_ROOT / "content" / "blog"
+
+
+def load_env_file(path: Path) -> dict[str, str]:
+    values: dict[str, str] = {}
+    if not path.exists():
+        return values
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        if "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        values[key.strip()] = value.strip().strip('"').strip("'")
+    return values
+
+
+def get_github_token() -> str | None:
+    if token := os.environ.get("GITHUB_TOKEN"):
+        return token
+    env_values = load_env_file(REPO_ROOT / ".env")
+    return env_values.get("GITHUB_TOKEN")
+
+
+def get_url_with_token(remote: str, token: str) -> str:
+    remote_url = run_git("remote", "get-url", remote, capture_output=True)
+    if not remote_url.startswith("https://"):
+        raise SystemExit("Uzak origin URL'si https:// ile başlamalı.")
+    return re.sub(r"^https://(?:[^@]+@)?", f"https://{token}@", remote_url)
 
 
 def slugify(text: str) -> str:
@@ -83,10 +113,15 @@ def commit_changes(message: str):
     print(f"Commit yapıldı: {message}")
 
 
-def push_changes(branch: str, remote: str):
+def push_changes(branch: str, remote: str, token: str | None = None):
     ensure_git_repo()
-    run_git("push", "-u", remote, branch)
-    print(f"Değişiklikler gönderildi: {remote}/{branch}")
+    if token:
+        remote_target = get_url_with_token(remote, token)
+        run_git("push", "-u", remote_target, branch)
+        print(f"Değişiklikler gönderildi: {remote}/{branch} (token kullanıldı)")
+    else:
+        run_git("push", "-u", remote, branch)
+        print(f"Değişiklikler gönderildi: {remote}/{branch}")
 
 
 def status():
@@ -116,11 +151,13 @@ def main():
     p_push = subparsers.add_parser("push", help="Değişiklikleri origin'e gönder")
     p_push.add_argument("--branch", default="main", help="Branch adı")
     p_push.add_argument("--remote", default="origin", help="Uzak repo adı")
+    p_push.add_argument("--token", default=None, help="GitHub PAT (token)")
 
     p_pub = subparsers.add_parser("publish", help="Commit ve push işlemini tek adımda yap")
     p_pub.add_argument("message", help="Commit mesajı")
     p_pub.add_argument("--branch", default="main", help="Branch adı")
     p_pub.add_argument("--remote", default="origin", help="Uzak repo adı")
+    p_pub.add_argument("--token", default=None, help="GitHub PAT (token)")
 
     p_status = subparsers.add_parser("status", help="Git durumunu göster")
 
@@ -135,10 +172,10 @@ def main():
     elif args.command == "commit":
         commit_changes(args.message)
     elif args.command == "push":
-        push_changes(args.branch, args.remote)
+        push_changes(args.branch, args.remote, args.token)
     elif args.command == "publish":
         commit_changes(args.message)
-        push_changes(args.branch, args.remote)
+        push_changes(args.branch, args.remote, args.token or get_github_token())
     elif args.command == "status":
         status()
     else:
