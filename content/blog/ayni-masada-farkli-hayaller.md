@@ -1,10 +1,10 @@
 +++
-title = "Aynı Masada Oturuyorduk Ama Aynı Yere Bakmıyorduk"
+title = "Aynı Masada Oturduk Ama Hayallerimiz Uyuşmadı"
 date = 2026-05-02
-description = "Güzel bir akşam geçirdik, keyifli bir sohbet ettik. Ama o başka bir yere bakıyordu, ben başka bir yere. Bunu ne zaman kabul etmelisin?"
+description = "Keyifli bir akşam, güzel bir sohbet ve aynı masada farklı hayaller. İlişkide kapıyı aralık bırakmanın ne anlama geldiğini yazdım."
 categories = ["İlişkiler"]
-tags = ["ilişkiler", "hayal kırıklığı", "bağ kurma", "yalnızlık", "beklenti", "aşk"]
-image = ""
+tags = ["ilişkiler", "hayal kırıklığı", "bağ kurma", "ilişki dinamikleri", "dürüstlük", "farkındalık"]
+image = "/images/ayni-masada-farkli-hayaller-1.webp"
 draft = false
 +++
 
@@ -12,7 +12,9 @@ Keyifli bir akşamdı. Gerçekten keyifliydi.
 
 Birkaç içki, güzel bir sohbet, iki farklı mekan. Yaşadığın şehirde böyle akşamlar nadiren denk gelir. Ben de tadını çıkardım, itiraf edeyim.
 
-Ama bir şey vardı. Hep o "bir şey" var ya.
+Ama bir şey vardı. Hep o “bir şey” var ya.
+
+![Bar masasında iki içki, önde boş masa](/images/ayni-masada-farkli-hayaller-2.webp)
 
 ## Aynı Masada, Farklı Hayaller
 
@@ -55,6 +57,8 @@ Bu sefer de aynı şey mi oldu? Muhtemelen. Ama şunu farklı görüyorum artık
 Yine de bir ağırlık var. İnkar etmeyeyim. Güzel bir insan, keyifli bir sohbet ve sonunda o his — *olmayacak gibi*.
 
 Zamana bırakıyorum. Her şeyi zamana bırakır gibi bunu da. Kapı aralık kalıyorsa kalsın — bunu zorla kapatmak da bir yalan olur.
+
+![Yağmurlu gecede şehir ışıklarında uzaklaşan yalnız bir figür](/images/ayni-masada-farkli-hayaller-3.webp)
 
 ## Hayaller Uyuşmayınca
 

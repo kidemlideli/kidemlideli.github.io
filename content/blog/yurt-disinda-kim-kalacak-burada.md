@@ -1,10 +1,10 @@
 +++
-title = "Yurt Dışına Gitmek İstiyorsun Ama Kim Kalacak Burada"
+title = "Yurt Dışına Gitmek İstiyorsun Ama Türkiye'de Kim Kalacak"
 date = 2026-05-03
-description = "Çevrendeki herkes yurt dışına gitmekten bahsediyorken sen neden kalıyorsun? Ben bu sorunun cevabını biliyorum ve özür dilemeyeceğim."
+description = "Yurt dışına gitmek isteyen arkadaşlarını destekliyorsun ama sevdiğin birinin gitmesi seni etkiliyor. Aidiyet ve Türkiye hakkında yazdım."
 categories = ["Toplum", "Düşünceler"]
-tags = ["göç", "Türkiye", "kimlik", "toplum", "milliyetçilik", "yurt dışı", "atatürk"]
-image = ""
+tags = ["göç", "Türkiye", "aidiyet", "yurt dışı", "toplum", "kimlik"]
+image = "/images/yurt-disinda-kim-kalacak-burada-1.webp"
 draft = false
 +++
 
@@ -26,6 +26,8 @@ Ben buna itiraz ediyorum.
 
 Küçük bir dişliyim. Bunun tam farkındayım. Bir kum tanesiyim. Ama bir kum tanesi olarak burada kalmayı seçiyorum. Üretimimi buraya aktarmayı seçiyorum. Bu benim için değerli.
 
+![Birbirine geçmiş dişliler, küçük bir parçanın makineye katkısı](/images/yurt-disinda-kim-kalacak-burada-2.webp)
+
 ## Orada Sana İyi Davranılacağını Mı Sanıyorsun
 
 Zaman zaman şunu düşünüyorum: Biz, buradaki yabancılara nasıl davranıyoruz?
@@ -43,6 +45,8 @@ Yanılıyor olabilirim. Ama bu soruyu kendinize hiç sordunuz mu gerçekten?
 Bu sözü kim söyledi? Bir ülkeyi yoktan var eden, işgal altındaki bir millete "dur, dön, savaş" diyen biri söyledi. O insan, o koşullarda, "git başka ülkede yaşa" demedi. Tam tersini yaptı.
 
 Ben bu mirasın çocuğu olduğumu düşünüyorum. Bu benim için kimlik meselesi — parti meselesi değil. Sağ mı, sol mu, hangi parti, hangi ideoloji — hiçbiri değil. Milletini seven bir insanın tutumu bu.
+
+![Fırtınalı gökyüzünde dalgalanan Türk bayrağı](/images/yurt-disinda-kim-kalacak-burada-3.webp)
 
 ## Gideceksen Git, Ama Gelmek İçin Git
 

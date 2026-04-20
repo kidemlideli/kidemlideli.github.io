@@ -1,16 +1,18 @@
 +++
-title = "Tek Başına Yaşayınca İnsan Kendini Daha Net Duyuyor"
+title = "Tek Başına Yaşayınca Kendi Sesini Daha Net Duyuyorsun"
 date = 2026-05-04
-description = "Yalnız yaşamak yalnızlık demek değil. Sessizlikte kendini buluyorsun, söyleyemediklerini söylüyorsun, içindeki sesi nihayet duyuyorsun."
+description = "Tek başına yaşamak yalnızlık değil, kendi sesini net duyma süreci. Sessizlikte kendini ifade etme ve yüzleşme üzerine yazdım."
 categories = ["Yaşam", "Düşünceler"]
-tags = ["yalnızlık", "özgürlük", "öz ifade", "tek başına yaşamak", "farkındalık", "günlük"]
-image = ""
+tags = ["yalnızlık", "özgürlük", "öz ifade", "tek başına yaşamak", "farkındalık", "kendini bulma"]
+image = "/images/tek-basina-kendi-sesini-duymak-1.webp"
 draft = false
 +++
 
 Ailemle yaşadığımda bazı konulara giremezdim. Bu kadar doğrudan konuşamazdım. Bu kadar açık olamazdım.
 
 Şimdi tek başımayım. Ve bu her şeyi değiştirdi.
+
+![Geceleri lamba ışığında açık defter ve kahve, şehir manzaralı pencere](/images/tek-basina-kendi-sesini-duymak-2.webp)
 
 ## Sessizlikte Kendi Sesini Duymak
 
@@ -29,6 +31,8 @@ Bu değişim tek başıma yaşamakla başladı. Sessiz bir odada kendine kamera 
 Bence bu daha ham bir ifade biçimi. Daha az kurgulanmış. Daha az kontrol altında.
 
 Ve bu benim için iyi. Çünkü zaten çok kontrol etmeye çalışmışım kendimi. Uzun zaman boyunca.
+
+![Tek başına odasında kameraya konuşan, yüzü belirsiz biri](/images/tek-basina-kendi-sesini-duymak-3.webp)
 
 ## Yalnız Olmak ile Yalnızlık Aynı Şey Değil
 
