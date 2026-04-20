@@ -72,6 +72,8 @@ draft = false
 
 Tarih olarak transkripsiyonun tarihini veya bugünün tarihini kullan.
 
+Tarihleri blog yayın takvimine göre planla. Son yayının tarihini kontrol et ve yeni yazıları ondan sonraki günlere sırala. Birden fazla yeni yazı varsa, yayın aralığını günlük olarak ayarla; örneğin ilk yeni yazıyı bir gün sonra, sonraki yazıyı ikinci gün sonra olarak planla.
+
 ---
 
 ## Dosya Adı Kuralı
